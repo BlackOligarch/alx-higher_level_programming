@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Defines the base class for other classes."""
+"""Defines the base class for future classes."""
 
 import csv
 import os
@@ -8,7 +8,7 @@ import turtle
 
 
 class Base:
-    """Base object for future classes"""
+    """Base object for future classes."""
 
     __nb_objects = 0
 
@@ -216,12 +216,12 @@ class Base:
         """Draw rectangles and squares side by side using the turtle module.
 
         Args:
-            list_rectangles (list): list of Rectangle objects to draw.
-            list_squares (list): list of Square objects to draw.
+            list_rectangles (list): A list of Rectangle objects to draw.
+            list_squares (list): A list of Square objects to draw.
         """
         screen = turtle.Screen()
         screen.bgcolor("#180302")
-        screen.title("Shapes | BlackOligarch*_*")
+        screen.title("Shapes | theLazyProgrammer^_^")
 
         drawer = turtle.Turtle()
         drawer.pensize(5)
@@ -238,7 +238,7 @@ class Base:
         """Draw a list of shapes using the turtle module.
 
         Args:
-            turtle_drawer (turtle.Turtle)object: The turtle used for drawing
+            turtle_drawer (turtle.Turtle): The turtle used for drawing.
             shapes (list): A list of shapes (Rectangle or Square objects) to
             draw.
             color (str): The color to use for drawing.
