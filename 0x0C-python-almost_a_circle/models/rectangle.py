@@ -6,7 +6,7 @@ from models.base import Base
 
 
 class Rectangle(Base):
-    """This class models a Rectangle object."""
+    """Models a Rectangle object."""
 
     def __init__(
         self, width: int, height: int, x: int = 0, y: int = 0, id=None
@@ -33,7 +33,45 @@ class Rectangle(Base):
 
         Returns:
             str: Information about the Rectangle instance.
-        """      """
+        """
+        return (
+            f"[{self.__class__.__name__}] ({self.id}) "
+            f"{self.x}/{self.y} - {self.width}/{self.height}"
+        )
+
+    @property
+    def width(self) -> int:
+        """
+        Returns the width.
+
+        Returns:
+            int: The width of the shape.
+        """
+        return self.__width
+
+    @width.setter
+    def width(self, value: int) -> None:
+        """
+        Sets and/or updates the shape's width.
+
+        Args:
+            value (int): The value to assign to width.
+
+        Raises:
+            TypeError: If the `value` provided is not an integer.
+            ValueError: If the `value` is less than or equal to zero.
+        """
+        if type(value) is not int:
+            raise TypeError("width must be an integer")
+
+        if value <= 0:
+            raise ValueError("width must be > 0")
+
+        self.__width = value
+
+    @property
+    def height(self) -> int:
+        """
         Returns the height.
 
         Returns:
@@ -178,41 +216,3 @@ class Rectangle(Base):
             "height": self.__height,
             "width": self.__width,
         }
-        return (
-            f"[{self.__class__.__name__}] ({self.id}) "
-            f"{self.x}/{self.y} - {self.width}/{self.height}"
-        )
-
-    @property
-    def width(self) -> int:
-        """
-        Returns the width.
-
-        Returns:
-            int: The width of the shape.
-        """
-        return self.__width
-
-    @width.setter
-    def width(self, value: int) -> None:
-        """
-        Sets and/or updates the shape's width.
-
-        Args:
-            value (int): The value to assign to width.
-
-        Raises:
-            TypeError: If the `value` provided is not an integer.
-            ValueError: If the `value` is less than or equal to zero.
-        """
-        if type(value) is not int:
-            raise TypeError("width must be an integer")
-
-        if value <= 0:
-            raise ValueError("width must be > 0")
-
-        self.__width = value
-
-    @property
-    def height(self) -> int:
-  
