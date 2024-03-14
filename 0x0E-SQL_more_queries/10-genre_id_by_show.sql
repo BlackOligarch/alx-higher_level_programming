@@ -1,4 +1,4 @@
-s script lists all shows contained in the database 'hbtn_0d_tvshows' that
+-- This script lists all shows contained in the database 'hbtn_0d_tvshows' that
 -- have at least one genre linked
 
 -- select the TV show and the TV show genre fields
