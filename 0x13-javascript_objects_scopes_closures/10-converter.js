@@ -1,4 +1,4 @@
-o#!/usr/bin/node
+#!/usr/bin/node
 
 /**
  * Converts a number to a specified base
