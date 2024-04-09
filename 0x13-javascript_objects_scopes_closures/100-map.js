@@ -1,4 +1,3 @@
-
 #!/usr/bin/node
 
 // Imports an array and computes a new array with each value equal to the
